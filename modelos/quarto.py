@@ -9,3 +9,6 @@ class Quarto:
     
     def descrever_comodidades(self):
         return "Quarto com comodidades básicas."
+
+    def __str__(self):
+        return f"Quarto {self.numero} (R$ {self.diaria_base:.2f})"
