@@ -5,8 +5,8 @@ Projeto desenvolvido para a disciplina de Programação Orientada a Objetos (POO
 ## Integrantes
 
 - Carlos Ítalo Alves Ferreira
-- Yarley
-- Vinícius
+- Yarley Aguiar de Sousa
+- Vinícius Maia Silva
 
 ## Objetivo
 
