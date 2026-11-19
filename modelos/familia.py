@@ -7,7 +7,10 @@ class Familia(Quarto):
         self.adicional_por_pessoa = adicional_por_pessoa
 
     def calcular_diaria(self, noites):
-        return super().calcular_diaria(noites) + self.adicional_por_pessoa * self.capacidade * noites
+        return (
+            self.diaria_base * noites
+            + self.adicional_por_pessoa * self.capacidade * noites
+        )
 
     def descrever_comodidades(self):
         return "Quarto Família: camas extras e espaço para família."

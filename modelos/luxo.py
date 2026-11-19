@@ -7,7 +7,7 @@ class Luxo(Quarto):
         self.adicional_luxo = adicional_luxo
 
     def calcular_diaria(self, noites):
-        return super().calcular_diaria(noites) + self.adicional_luxo * noites
+        return (self.diaria_base + self.adicional_luxo) * noites
 
     def descrever_comodidades(self):
         return "Quarto Luxo: ar-condicionado, frigobar e hidromassagem."

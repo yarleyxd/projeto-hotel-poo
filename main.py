@@ -3,15 +3,12 @@ from modelos.standard import Standard
 from modelos.familia import Familia
 from modelos.cobertura import Cobertura
 
-# Teste da classe Quarto
-quarto = Quarto(101, 2, 150)
-
-print("Número:", quarto.numero)
-print("Capacidade:", quarto.capacidade)
-print("Diária:", quarto.diaria_base)
-
-print("Valor de 3 noites:", quarto.calcular_diaria(3))
-print(quarto.descrever_comodidades())
+# Teste da classe Quarto (abstrata)
+try:
+    quarto = Quarto(101, 2, 150)
+except TypeError as erro:
+    print("Erro esperado ao instanciar Quarto:")
+    print(erro)
 
 # Teste da classe Standard
 standard = Standard(102, 2, 180, "casal")
@@ -31,9 +28,14 @@ quartos = [
     Cobertura(104, 5, 600, 150, True, 200)
 ]
 
+print("--- Testando quartos ---")
 for quarto in quartos:
     print(quarto)
     print("Valor de 3 noites:", quarto.calcular_diaria(3))
     print(quarto.descrever_comodidades())
+    print("Descrição:", quarto.descrever_quarto())
 
-print(isinstance(quartos[0], Quarto))
+# Teste de isistance()
+print("--- Teste de herança ---")
+for quarto in quartos:
+    print(f"{quarto} é instância de Quarto:", isinstance(quarto, Quarto))
