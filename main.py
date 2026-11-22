@@ -5,6 +5,7 @@ from modelos.cobertura import Cobertura
 from modelos.cafe_da_manha import CafeDaManha
 from modelos.spa import Spa
 from modelos.lavanderia import Lavanderia
+from modelos.servico_extra import ServicoExtra
 
 # Teste da classe Quarto (abstrata)
 try:
@@ -53,5 +54,6 @@ servicos = [
 ]
 
 for servico in servicos:
-    print(servico.descricao())
-    print("Custo: R$", servico.calcular_custo())
+    if isinstance(servico, ServicoExtra):
+        print(servico.descricao())
+        print("Custo: R$", servico.calcular_custo())

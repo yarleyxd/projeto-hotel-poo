@@ -60,3 +60,19 @@ Consulte o arquivo `diagrama.md`.
 - Git
 - GitHub
 - Visual Studio Code
+
+### Classe Abstrata
+
+A classe abstrata `Quarto` possui os métodos abstratos `calcular_diaria()` e `descrever_comodidades()`.
+
+As classes `Standard`, `Familia` e `Luxo` implementam esses métodos. `Suite` e `Cobertura` herdam os métodos implementados.
+
+### Interface
+
+A interface `ServicoExtra` possui os métodos `descricao()` e `calcular_custo()`.
+
+As classes `CafeDaManha`, `Spa` e `Lavanderia` implementam essa interface.
+
+### Testes
+
+O `main.py` demonstra o erro ao tentar instanciar a classe abstrata `Quarto`, utiliza os métodos polimórficos nas classes de quartos e utiliza `isinstance()` para verificar os serviços extras.
