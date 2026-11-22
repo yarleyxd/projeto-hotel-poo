@@ -2,6 +2,9 @@ from modelos.quarto import Quarto
 from modelos.standard import Standard
 from modelos.familia import Familia
 from modelos.cobertura import Cobertura
+from modelos.cafe_da_manha import CafeDaManha
+from modelos.spa import Spa
+from modelos.lavanderia import Lavanderia
 
 # Teste da classe Quarto (abstrata)
 try:
@@ -39,3 +42,16 @@ for quarto in quartos:
 print("--- Teste de herança ---")
 for quarto in quartos:
     print(f"{quarto} é instância de Quarto:", isinstance(quarto, Quarto))
+
+# Teste de serviços extras
+print("\n--- Teste dos serviços extras ---")
+
+servicos = [
+    CafeDaManha(),
+    Spa(),
+    Lavanderia()
+]
+
+for servico in servicos:
+    print(servico.descricao())
+    print("Custo: R$", servico.calcular_custo())
