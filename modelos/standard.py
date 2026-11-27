@@ -5,6 +5,16 @@ class Standard(Quarto):
         super().__init__(numero, capacidade, diaria_base)
         self.tipo_cama = tipo_cama
 
+    @property
+    def tipo_cama(self):
+        return self._tipo_cama
+    
+    @tipo_cama.setter
+    def tipo_cama(self, valor):
+        if not isinstance(valor, str) or not valor.strip():
+            raise ValueError("O tipo de cama deve ser informado.")
+        self._tipo_cama = valor.strip()
+
     def calcular_diaria(self, noites):
         return self.diaria_base * noites
     
